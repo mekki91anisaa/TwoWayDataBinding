@@ -1,0 +1,73 @@
+<div class="main">
+
+<div class='card-container'>
+
+    <div class='flippable-card' [ngClass]="{'flipped':flipped}" >
+
+        <div class='mat-cardo'>
+
+            
+            <div class="top-dev">
+
+            </div>
+            <div class="icon-div"><img src="./assets/women.jpg"></div>
+            <div class="bottom-dev">
+                <div class="info-per">
+                    <mat-label>{{nom}} {{prenom}} </mat-label>
+                    <mat-label>{{job}}</mat-label>
+                </div>
+
+                <div class="info-pro">
+                    <mat-label>{{citation}}</mat-label>
+
+                    <mat-label>{{description}}</mat-label>
+                    <mat-label>{{mot}}</mat-label>
+                     
+
+                </div>
+              
+                <button (click)='flipped = !flipped' mat-stroked-button color="primary"><mat-icon>autorenew</mat-icon> Manual Rotation
+                </button>
+            </div>
+           
+        </div>
+
+        <div class='mat-cardo back'>
+
+           <div class="content">
+            <mat-form-field class="example-full-width">
+                <mat-label>Nom</mat-label>
+                <input [(ngModel)]="nom" matInput >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Prénom</mat-label>
+                <input [(ngModel)]="prenom"  matInput >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Job</mat-label>
+                <input [(ngModel)]="job" matInput >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Citation favorite</mat-label>
+                <input [(ngModel)]="citation" matInput >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Dévrivez nous votre travail</mat-label>
+                <input [(ngModel)]="description" matInput >
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>Mot clé de votre travail</mat-label>
+                <input [(ngModel)]="mot" matInput >
+              </mat-form-field>
+              <button (click)='flipped = !flipped' mat-stroked-button color="primary"><mat-icon>autorenew</mat-icon> Back
+              </button>
+        </div>
+        
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
